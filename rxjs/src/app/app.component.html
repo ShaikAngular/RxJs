@@ -1,55 +1,58 @@
-<div class= "">
-  RxJs Practice
+<div class="container m-3">
+
+  <div class=" d-flex justify-content-center ">
+    <p class="fs-1 fw-bold text-primary">RxJs Practice</p>
+  </div>
+
+  <h6 class = "text-danger">Observable, Observer & Subscribe</h6>
+    <div *ngIf ="agentName">
+      {{agentName}}
+    </div>
+
+  <h6 class = "text-danger">Operators</h6>
+    <ul>
+      <li>operators are pure functions</li>
+      <li>most operators take input as observable and provide output as observable</li>
+      <ul>
+        Types of Operators
+        <li>Creation</li>
+        <li>Mathematical</li>
+        <li>Join</li>
+        <li>Transformation</li>
+        <li>Filtering</li>
+        <li>Utility</li>
+        <li>Conditional</li>
+        <li>Multicasting</li>
+        <li>Error handling</li>
+      </ul>
+    </ul>
+
+  <h6 class = "text-danger">of operator</h6>
+    <ul>
+      <li>of operator is used to create an observable from a string, or an array or an object</li>
+      <li> no processing is done, it returns list as it is</li>
+    </ul>
+
+  <h6 class = "text-danger">from operator</h6>
+    <ul>
+      <li>from operator is used to create an observable from an array or an array like object or an iterable object or an observable like object</li>
+      <li>it processes each element in the list</li>
+    </ul>
+
+  <h6 class = "text-danger">fromEvent operator</h6>
+    <ul>
+      <li>fromEvent operator creates an observable that emits events of specific type coming from the given event target</li>
+      <li>we can bind target elements and methods to make sure we get observable as ouput</li>
+      <li>like move click event actions as observable, simply creats an observable from an event</li>
+      <li>in Angular, we will use ViewChild, NativeElement as target element and bind events</li>
+    </ul>
+
+  <button #myButton name="test button" (click)="rxjsFromEvent()" class="btn btn-primary">clcik for observable</button>
+
+  <h6 class = "text-danger">interval operator</h6>
+    <ul>
+      <li>interval operator creates an observablethat emits sequential numbers every specified interval of time, on a specified SchedularLike</li>
+    </ul>
 </div>
-
-<h6 class = "text-danger">Observable, Observer & Subscribe</h6>
-<div *ngIf ="agentName">
-  {{agentName}}
-</div>
-
-<h6 class = "text-danger">Operators</h6>
-<ul>
-  <li>operators are pure functions</li>
-  <li>most operators take input as observable and provide output as observable</li>
-  <ul>
-    Types of Operators
-    <li>Creation</li>
-    <li>Mathematical</li>
-    <li>Join</li>
-    <li>Transformation</li>
-    <li>Filtering</li>
-    <li>Utility</li>
-    <li>Conditional</li>
-    <li>Multicasting</li>
-    <li>Error handling</li>
-  </ul>
-</ul>
-
-<h6 class = "text-danger">of operator</h6>
-<ul>
-  <li>of operator is used to create an observable from a string, or an array or an object</li>
-  <li> no processing is done, it returns list as it is</li>
-</ul>
-
-<h6 class = "text-danger">from operator</h6>
-<ul>
-  <li>from operator is used to create an observable from an array or an array like object or an iterable object or an observable like object</li>
-  <li>it processes each element in the list</li>
-</ul>
-
-<h6 class = "text-danger">fromEvent operator</h6>
-<ul>
-  <li>fromEvent operator creates an observable that emits events of specific type coming from the given event target</li>
-  <li>we can bind target elements and methods to make sure we get observable as ouput</li>
-  <li>like move click event actions as observable, simply creats an observable from an event</li>
-  <li>in Angular, we will use ViewChild, NativeElement as target element and bind events</li>
-</ul>
-
-<button #myButton name="test button" (click)="rxjsFromEvent()">clcik for observable</button>
-
-<h6 class = "text-danger">interval operator</h6>
-<ul>
-  <li>interval operator creates an observablethat emits sequential numbers every specified interval of time, on a specified SchedularLike</li>
-</ul>
 
 <app-debounce></app-debounce>
