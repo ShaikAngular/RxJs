@@ -1,0 +1,92 @@
+<div class="container m-3">
+  <h6 class="text-danger">debounceTime operator</h6>
+    <ul>
+      <li>emits a notification from the source observable only after a particular time span has passed without another source emission</li>
+      <li>search --> user types the values, fast API calls</li>
+      <li>Delay /emit the next</li>
+    </ul>
+  <h6 class="text-danger">search with RxJs debounceTime</h6>
+    <div [formGroup]="searchForm" class=" col-md-3 ">
+      <input type="text" class = "form-control" formControlName="name" (keyup)="readValue()">
+    </div>
+
+  <h6 class="text-danger">take operator</h6>
+    <ul>
+      <li>Emits only the first count values emitted by the source observable</li>
+      <li>in simple terms, in debounceTime operator if we want restrict the count / limit the count we can use take operator</li>
+      <li>take will tell us how many values we can accept</li>
+    </ul>
+
+  <h6 class="text-danger">takeWhile operator</h6>
+    <ul>
+      <li>it is similar to take operator, like an extension</li>
+      <li>takeWhile takes the value and checks the condition whether it is satisfying or not</li>
+      <li>emits values emitted by the source observable so long as each value satisies the given condition, and then completes as soon as this condition is not satisfied</li>
+      <li>take boolean vale from function in condition</li>
+    </ul>
+
+  <h6 class="text-danger">takeLast operator</h6>
+    <ul>
+      <li>takes last specified values</li>
+      <li>waits for source to complete, then emits the last N values from the source, as specified by the count argument</li>
+    </ul>
+
+  <h6 class="text-danger">first operator</h6>
+    <ul>
+      <li>It will give the first value emitted byt the source observable</li>
+      <li>it is useful when we are expecting fixed values like list categories, list of statuses</li>
+    </ul>
+
+  <h6 class="text-danger">last operator</h6>
+    <ul>
+      <li>It will give the last value emitted byt the source observable</li>
+      <li>it is useful when we are expecting fixed values like list categories, list of statuses</li>
+    </ul>
+
+  <h6 class="text-danger">elementAt operator</h6>
+    <ul>
+      <li>will give us single value from source observale at a specific index</li>
+      <li> array index starts with index 0</li>
+    </ul>
+
+  <h6 class="text-danger" >filter operator</h6>
+    <ul>
+      <li>filter operator will give the filtered values from the source observable based upon the predicate/condition function given</li>
+      <li>if we have an array with 10 elements, we want only 2 elements based upon a condition </li>
+      <li> filter((v)=>this.filterList(v))</li>
+    </ul>
+
+  <h6 class="text-danger">distinct operator</h6>
+    <ul>
+      <li>it gives all the values from the source observable that are distinct when compared with the previous value</li>
+      <li>similar to set</li>
+      <li>simply provides distinct/unique values from the list (removes redundancy)</li>
+    </ul>
+  
+  <h6 class="text-danger">skip operator</h6>
+    <ul>
+      <li>skip operator will give back an observable that will skip the first occurance of count items taken as input</li>
+      <li>skips the specified no.of elements from list (from starting index)</li>
+      <li> if specified as 2, then it will skip first 2 elements from the list</li>
+    </ul>
+
+    <h6 class="text-danger">count operator</h6>
+    <ul>
+      <li>it will give back an observable that will skip the first occurance of count items taken as input</li>
+      <li>count gives no.of elements available</li>
+    </ul>
+
+  <h6 class = "text-danger">max operator</h6>
+    <ul>
+      <li>max oparator will take an observable with all values and return an observable with maximum value</li>
+      <li>provides maximum number from list</li>
+      <li>list with numbers as elements</li>
+    </ul>
+
+    <h6 class = "text-danger">min operator</h6>
+    <ul>
+      <li>min oparator will take an observable with all values and return an observable with minimum value</li>
+      <li>provides minimum number from list</li>
+      <li>list with numbers as elements</li>
+    </ul>
+</div>
