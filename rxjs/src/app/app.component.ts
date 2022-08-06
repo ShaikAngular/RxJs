@@ -44,11 +44,11 @@ export class AppComponent implements OnInit{
     })
 
   // of operator
-  this.students.subscribe(res=>console.log(res));
+  this.students.subscribe(res=>console.log('of',res + 'Dhiman'));
 
   
   // from operator
-  this.orders$.subscribe(res=>console.log(res));
+  this.orders$.subscribe(res=>console.log('from',res + 'Dhiman'));
 
   // interval operator
   this.orders$.subscribe(res=>{
